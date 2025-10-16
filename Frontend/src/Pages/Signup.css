@@ -1,0 +1,110 @@
+@keyframes signupGlow {
+  0%, 100% {
+    border-color: rgba(139, 92, 246, 0.6);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  }
+  33% {
+    border-color: rgba(59, 130, 246, 0.6);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  }
+  66% {
+    border-color: rgba(16, 185, 129, 0.6);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+  }
+}
+
+.signup-animated {
+  border: 3px solid rgba(139, 92, 246, 0.6);
+  animation: signupGlow 3s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.form-field {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.form-field:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.form-field:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.form-field:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.form-button {
+  animation: bounceIn 0.8s ease-out 0.4s both;
+}
+
+.form-link {
+  animation: slideInLeft 0.6s ease-out 0.5s both;
+}
+
+@keyframes inputGlow {
+  0%, 100% {
+    border-color: rgba(139, 92, 246, 0.6);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+  }
+  33% {
+    border-color: rgba(59, 130, 246, 0.6);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+  }
+  66% {
+    border-color: rgba(16, 185, 129, 0.6);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+  }
+}
+
+.input-animated {
+  border: 2px solid rgba(139, 92, 246, 0.6) !important;
+  animation: inputGlow 3s ease-in-out infinite;
+}
+
+.input-animated:focus {
+  animation-play-state: paused;
+  border-color: rgba(139, 92, 246, 0.8) !important;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.5) !important;
+  outline: none !important;
+}
